@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="background.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Test Website</title>
+</head>
+
+
+<body>
+  <!-- Navbar (phone)-->
+  <div class="navbar">
+    <a onclick="window.location.href='howto.html'" class="active">HOW-TO</a>
+    <div id="myLinks">
+      <a onclick="window.location.href='index.html'">HOME</a>
+      <a onclick="window.location.href='about.html'">ABOUT</a>
+      <a onclick="window.location.href='contact.html'">CONTACT</a>
+    </div>
+    <a href="javascript:void(0);" class="icon" onclick="toggleFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+
+  <!-- About -->
+
+  <script>
+
+    // Change style of navbar on scroll
+    window.onscroll = function() {myFunction()};
+    function myFunction() {
+        var navbar = document.getElementById("navbar");
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+        } else {
+            navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+        }
+    }
+
+    // menubar toggle
+    function toggleFunction() {
+      var x = document.getElementById("myLinks");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+
+    // Getting current time
+    var today = new Date();
+    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    
+  </script>
+</body>
+</html>

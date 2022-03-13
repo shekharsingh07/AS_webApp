@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+
+    <script>
+      AFRAME.registerComponent("alpha-video", {
+        init: function() {
+          this.materialLoaded = this.materialLoaded.bind(this);
+          console.log("init");
+          // wait until the material is ready
+          this.el.addEventListener("loaded", this.materialLoaded);
+        },
+        materialLoaded: function() {
+          // grab the material
+          let material = this.el.getObject3D("mesh").material;
+          console.log(material.map.format);
+
+          // swap the format
+          material.map.format = THREE.RGBAFormat;
+          material.map.needsUpdate = true;
+          console.log(material.map);
+        },
+        remove: function() {
+          this.el.removeEventListener("loaded", this.materialLoaded);
+        }
+      });
+      // clickable
+      AFRAME.registerComponent("play-on-click", {
+        init: function() {
+          document.body.addEventListener("click", e => {
+            const src = this.el.getAttribute("src");
+            document.querySelector(src).play();
+          });
+        }
+      });
+    </script>
+  </head>
+  <body style="margin : 0px; overflow: hidden;">
+    <a-scene embedded arjs>
+      <a-assets>
+        <!-- <video
+          id="soccer"
+          crossorigin="anonymous"
+          src="https://rawcdn.githack.com/gftruj/webzamples/b500ecb2171e288ae6a14a917816d300a6d374c3/aframe/assets/videos/soccer/soccer1.webm"
+          preload="auto"
+          autoplay
+          loop="true"
+        ></video> -->
+        <video
+          id="vid-1"
+          loop="true"
+          crossorigin="anonymous"
+          src="img/Boba.mkv"
+        ></video>
+        <!-- <video
+          id="vid-2"
+          loop="true"
+          crossorigin="anonymous"
+          src="https://rawcdn.githack.com/photonstorm/phaser-examples/0a52334b78ce8150bca8e57149431572b75ed8a0/examples/assets/video/alpha-webm.webm"
+        ></video> -->
+      </a-assets>
+
+      <a-marker preset="hiro">
+        <a-video
+          play-on-click
+          alpha-video
+          width="1.32"
+          height="1"
+          rotation="270 0 0"
+          position="0 0.10 0"
+          src="#vid-1"
+          material="transparent: true"
+        ></a-video>
+        <!-- <a-video
+          play-on-click
+          alpha-video
+          width="1.32"
+          height="1"
+          rotation="270 0 0"
+          position="0 0.14 0"
+          src="#soccer"
+          material="transparent: true"
+        ></a-video>
+        <a-video
+          play-on-click
+          alpha-video
+          width="1.32"
+          height="1"
+          rotation="270 0 0"
+          position="0 0.18 0"
+          src="#vid-2"
+          material="transparent: true"
+        ></a-video> -->
+      </a-marker>
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
