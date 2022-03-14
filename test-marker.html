@@ -40,29 +40,15 @@
   <body style="margin : 0px; overflow: hidden;">
     <a-scene embedded arjs>
       <a-assets>
-        <!-- <video
-          id="soccer"
-          crossorigin="anonymous"
-          src="https://rawcdn.githack.com/gftruj/webzamples/b500ecb2171e288ae6a14a917816d300a6d374c3/aframe/assets/videos/soccer/soccer1.webm"
-          preload="auto"
-          autoplay
-          loop="true"
-        ></video> -->
         <video
           id="vid-1"
           loop="true"
           crossorigin="anonymous"
-          src="img/Boba.mkv"
+          src="https://www.youtube.com/watch?v=krDWc30PAGg"
         ></video>
-        <!-- <video
-          id="vid-2"
-          loop="true"
-          crossorigin="anonymous"
-          src="https://rawcdn.githack.com/photonstorm/phaser-examples/0a52334b78ce8150bca8e57149431572b75ed8a0/examples/assets/video/alpha-webm.webm"
-        ></video> -->
       </a-assets>
 
-      <a-marker preset="hiro">
+      <a-marker type="pattern" patternUrl="img/markers/one.patt">
         <a-video
           play-on-click
           alpha-video
@@ -73,26 +59,6 @@
           src="#vid-1"
           material="transparent: true"
         ></a-video>
-        <!-- <a-video
-          play-on-click
-          alpha-video
-          width="1.32"
-          height="1"
-          rotation="270 0 0"
-          position="0 0.14 0"
-          src="#soccer"
-          material="transparent: true"
-        ></a-video>
-        <a-video
-          play-on-click
-          alpha-video
-          width="1.32"
-          height="1"
-          rotation="270 0 0"
-          position="0 0.18 0"
-          src="#vid-2"
-          material="transparent: true"
-        ></a-video> -->
       </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
