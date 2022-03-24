@@ -26,3 +26,8 @@ body, html {
 .col-md-4:hover .play-btn{
     opacity: 1;
 }
+
+.modal-content{
+    background: transparent;
+    border: none;
+}
