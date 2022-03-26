@@ -13,6 +13,7 @@ body, html {
 
 .h1{
     margin-bottom: 50px !important;
+    color: white;
 }
 
 .play-btn{
@@ -30,4 +31,8 @@ body, html {
 .modal-content{
     background: transparent;
     border: none;
+}
+
+.img-fluid{
+    border: 10px solid white;
 }
