@@ -11,9 +11,11 @@ body, html {
     margin-top: 12%;
 }
 
-.h1{
+h1{
     margin-bottom: 50px !important;
+    text-align: center;
     color: white;
+    font-size: 72px;
 }
 
 .play-btn{
@@ -34,5 +36,30 @@ body, html {
 }
 
 .img-fluid{
-    border: 10px solid white;
+    border: 10px outset #FFC300;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+.back{
+    position: relative;
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    color: #fff;
+    background: #e600ac;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07), 0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07), 0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07);
+    z-index: 10;
+    top: 24px;
+    left: 24px;
+  }
+  .back svg{
+    padding-top: 12px;
+    padding-left: 12px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font: 64px;
+    top: 0px;
+    left: 0px;
+  }

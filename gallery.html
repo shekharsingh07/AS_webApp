@@ -10,8 +10,18 @@
     </head>
     <body>
 
+        <div class="back">
+            <a onclick="window.location.href='index.html'">
+                <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" fill="currentColor" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+                  </svg>
+            </a>
+        </div>
+
+        <h1>Video Messages:</h1>
+
         <div class="container text-center">
-            <h1>Gallery</h1>
+            
 
             <div class="row">
                 <!-- 1) Mum and dad -->
@@ -21,54 +31,59 @@
                 </div>
                 <!-- 2) Nani -->
                 <div class="col-md-4">
-                    <img src="./img/sq_Nani.jpg" class="img-fluid">
+                    <img src="./img/nani.jpg" class="img-fluid">
                     <img src="./misc/play.png" class="play-btn" data-bs-toggle="modal" data-bs-target="#modal2">
                     
                 </div>
                 <!-- 3) nana -->
                 <div class="col-md-4">
-                    <img src="./img/squaretemp.jpg" class="img-fluid">
+                    <img src="./img/nana.jpg" class="img-fluid">
                     <img src="./misc/play.png" class="play-btn" data-bs-toggle="modal" data-bs-target="#modal3">           
                 </div>
-                <!-- 4) Rhudir -->
+                <!-- 4) Arjee and Arjaa-->
+                <div class="col-md-4">
+                    <img src="./img/arjee_everyone.jpeg" class="img-fluid">
+                    <img src="./misc/play.png" class="play-btn" data-bs-toggle="modal" data-bs-target="#modal11">                  
+                </div>
+                <!-- 5) Rhudir -->
                 <div class="col-md-4">
                     <img src="./img/sq_Rudhir.jpg" class="img-fluid">
                     <img src="./misc/play.png" class="play-btn" data-bs-toggle="modal" data-bs-target="#modal4">                  
                 </div>
-                <!-- 5) Prantha and Gabi -->
+                <!-- 6) Prantha and Gabi -->
                 <div class="col-md-4">
-                    <img src="./img/squaretemp.jpg" class="img-fluid">
+                    <img src="./img/prantha_gabs.jpeg" class="img-fluid">
                     <img src="./misc/play.png" class="play-btn" data-bs-toggle="modal" data-bs-target="#modal5">                  
                 </div>
-                <!-- 6) Deshi mousi and family -->
+                <!-- 7) Deshi mousi and family -->
                 <div class="col-md-4">
                     <img src="./img/deshi_mousi_family.jpg" class="img-fluid">
                     <img src="./misc/play.png" class="play-btn" data-bs-toggle="modal" data-bs-target="#modal6">                  
                 </div>
-                <!-- 7) Neeraj mama -->
+                <!-- 8) Neeraj mama -->
                 <div class="col-md-4">
-                    <img src="./img/squaretemp.jpg" class="img-fluid">
+                    <img src="./img/sq_neeraj.jpg" class="img-fluid">
                     <img src="./misc/play.png" class="play-btn" data-bs-toggle="modal" data-bs-target="#modal7">                  
                 </div>
-                <!-- 8) Reshmi poowa and family -->
+                <!-- 9) Reshmi poowa and family -->
                 <div class="col-md-4">
-                    <img src="./img/squaretemp.jpg" class="img-fluid">
+                    <img src="./img/sq_reshmi_family.jpg" class="img-fluid">
                     <img src="./misc/play.png" class="play-btn" data-bs-toggle="modal" data-bs-target="#modal8">                  
                 </div>
-                <!-- 9) Ashnee poowa and uncle Vinesh -->
+                <!-- 10) Ashnee poowa and uncle Vinesh -->
                 <div class="col-md-4">
-                    <img src="./img/squaretemp.jpg" class="img-fluid">
+                    <img src="./img/ashnee_vinesh.jpg" class="img-fluid">
                     <img src="./misc/play.png" class="play-btn" data-bs-toggle="modal" data-bs-target="#modal9">                  
                 </div>
-                <!-- 10) Avash, kavir and akshay -->
+                <!-- 11) Avash, kavir and akshay -->
                 <div class="col-md-4">
-                    <img src="./img/squaretemp.jpg" class="img-fluid">
+                    <img src="./img/avash.jpg" class="img-fluid">
                     <img src="./misc/play.png" class="play-btn" data-bs-toggle="modal" data-bs-target="#modal10">                  
                 </div>
-                <!-- 11) Arjee and Arjaa-->
+                <!-- 12) Nikki -->
                 <div class="col-md-4">
-                    <img src="./img/squaretemp.jpg" class="img-fluid">
-                    <img src="./misc/play.png" class="play-btn" data-bs-toggle="modal" data-bs-target="#modal11">                  
+                    <img src="./img/fam.jpg" class="img-fluid">
+                    <img src="./misc/play.png" class="play-btn" data-bs-toggle="modal" data-bs-target="#modal12">                  
                 </div>
             </div>
         </div>
@@ -228,10 +243,20 @@
                 </div>
             </div>
         </div>
-
-        
-
-
+        <!-- 12) Nikki -->
+        <div class="modal fade" id="modal12" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">From Nikki</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <center><iframe width="360" height="640" src="https://www.youtube.com/embed/jYEAsHNYSls" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+                    </div>
+                </div>
+            </div>
+        </div>
         
           
     </body>
